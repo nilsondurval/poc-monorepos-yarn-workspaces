@@ -1,0 +1,9 @@
+{
+  "name": "poc-monorepos-yarn-workspaces",
+  "packageManager": "yarn@3.2.4",
+  "workspaces": [
+    "apps/*",
+    "libs/my-lib-workspace",
+    "libs/my-lib-workspace/dist/my-lib"
+  ]
+}
