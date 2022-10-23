@@ -45,6 +45,30 @@ $ yarn plugin import workspace-tools // at root directory level
 
 # Setup development enviroment
 
+## building the lib first
+```sh
+// This step is necessary because the apps depends on the lib dist
+$ cd libs/my-lib-workspace
+$ npm install
+$ npm run build
+```
+
+## Installing and building all
+```sh
+// at root level
+$ yarn install 
+$ yarn workspaces foreach run build
+```
+
+## Starting
+```sh
+// at root level
+$  yarn workspace @poc-monorepos-yarn-workspaces/my-app1 run start
+$  yarn workspace @poc-monorepos-yarn-workspaces/my-app2 run start
+```
+
+# Useful commands
+
 ## Building
 
 ###  Building of one app/lib
